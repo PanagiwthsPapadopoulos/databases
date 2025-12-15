@@ -12,4 +12,4 @@ JOIN
 CROSS JOIN 
     Film f
 WHERE 
-    sch.clubID = 12;
+    sch.clubID = 3;
