@@ -21,6 +21,17 @@ DROP ROLE IF EXISTS
     'clubAdmin',
     'dbAdministrator';
     
+DROP USER IF EXISTS
+	'guestuser'@'localhost',
+    'SpongeBob'@'localhost',
+    'PatrickStar'@'localhost',
+    'jodorowsky'@'localhost',
+    'pepa'@'localhost',
+    'alex'@'localhost',
+    'antonis'@'localhost',
+    'panos'@'localhost',
+    'dbFilmAdmin'@'localhost';
+    
 CREATE ROLE	'guest',
 			'clubMember',
             'contentManager',
@@ -85,21 +96,17 @@ GRANT INSERT, UPDATE ON FilmClubsAUThDB.Actor TO 'contentManager';
  * PLUS they can perform select, insert, update on equipment,
  * and equipment usage.
  */
-GRANT SELECT, INSERT, UPDATE ON FilmClubsAUThDB.Equipment TO 'equipmentManager';
-GRANT SELECT, INSERT, UPDATE ON FilmClubsAUThDB.uses TO 'equipmentManager';
-/* maybe FilmClubsAUThDB.owns?
- * DELETE?
- */
+GRANT DELETE, SELECT, INSERT, UPDATE ON FilmClubsAUThDB.Equipment TO 'equipmentManager';
+GRANT DELETE, SELECT, INSERT, UPDATE ON FilmClubsAUThDB.uses TO 'equipmentManager';
+GRANT DELETE, SELECT, INSERT, UPDATE ON FilmClubsAUThDB.owns TO 'equipmentManager';
 
 /* ROLE: clubAdmin
- * clubAdmins have the same rights as clubMembers
+ * clubAdmins have the same rights as equipmentManager
  * PLUS they can perform select, insert and update on
  * club members, film clubs and
  */
 GRANT SELECT, INSERT, UPDATE ON FilmClubsAUThDB.FilmClub TO 'clubAdmin';
 GRANT SELECT, INSERT, UPDATE ON FilmClubsAUThDB.belongs_to TO 'clubAdmin';
-GRANT SELECT, INSERT, UPDATE ON FilmClubsAUThDB.owns TO 'clubAdmin';
-GRANT SELECT, INSERT, UPDATE ON FilmClubsAUThDB.Equipment TO 'clubAdmin';
 
 /* ROLE: dbAdministrator
  * dbAdministrators have select, insert, delete and update
@@ -134,7 +141,7 @@ GRANT 'guest', 'clubMember', 'equipmentManager' TO 'pepa'@'localhost';
 CREATE USER 'alex'@'localhost' IDENTIFIED BY 'Alex_Pass_123';
 CREATE USER 'antonis'@'localhost' IDENTIFIED BY 'Antonis_Pass_123';
 CREATE USER 'panos'@'localhost' IDENTIFIED BY 'Panos_Pass_123';
-GRANT 'guest', 'clubMember', 'clubAdmin' TO 'alex'@'localhost', 'antonis'@'localhost', 'panos'@'localhost';
+GRANT 'guest', 'clubMember', 'equipmentManager', 'clubAdmin' TO 'alex'@'localhost', 'antonis'@'localhost', 'panos'@'localhost';
 
 # Example: DB admin
 CREATE USER 'dbFilmAdmin'@'localhost' IDENTIFIED BY 'Admin_Password012';
