@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
 --
--- Host: localhost    Database: filmclubsauthdb
+-- Host: 127.0.0.1    Database: filmclubsauthdb
 -- ------------------------------------------------------
 -- Server version	8.0.44
 
@@ -146,7 +146,7 @@ CREATE TABLE `directed` (
 
 LOCK TABLES `directed` WRITE;
 /*!40000 ALTER TABLE `directed` DISABLE KEYS */;
-INSERT INTO `directed` VALUES (1,1),(2,2),(3,3),(4,4),(5,5),(6,6),(7,7);
+INSERT INTO `directed` VALUES (1,1),(2,2),(3,3),(4,4),(5,5),(6,6),(7,7),(8,8);
 /*!40000 ALTER TABLE `directed` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -171,7 +171,7 @@ CREATE TABLE `director` (
 
 LOCK TABLES `director` WRITE;
 /*!40000 ALTER TABLE `director` DISABLE KEYS */;
-INSERT INTO `director` VALUES (1,'Terry Gilliam','https://www.themoviedb.org/person/280-terry-gilliam'),(2,'John Waters','https://www.themoviedb.org/person/10367-john-waters'),(3,'Andrzej Å»uÅ‚awski','https://www.themoviedb.org/person/32082-andrzej-zulawski'),(4,'Terry Jones','https://www.themoviedb.org/person/10707-terry-jones'),(5,'Hayao Miyazaki','https://www.themoviedb.org/person/608'),(6,'Ηλίας Γιαννακάκης','https://www.themoviedb.org/person/1406049'),(7,'Walter Salles','https://www.themoviedb.org/person/8574-walter-salles');
+INSERT INTO `director` VALUES (1,'Terry Gilliam','https://www.themoviedb.org/person/280-terry-gilliam'),(2,'John Waters','https://www.themoviedb.org/person/10367-john-waters'),(3,'Andrzej Å»uÅ‚awski','https://www.themoviedb.org/person/32082-andrzej-zulawski'),(4,'Terry Jones','https://www.themoviedb.org/person/10707-terry-jones'),(5,'Hayao Miyazaki','https://www.themoviedb.org/person/608'),(6,'Ηλίας Γιαννακάκης','https://www.themoviedb.org/person/1406049'),(7,'Walter Salles','https://www.themoviedb.org/person/8574-walter-salles'),(8,'Martin McDonagh','https://www.themoviedb.org/person/53770-martin-mcdonagh');
 /*!40000 ALTER TABLE `director` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -222,7 +222,7 @@ CREATE TABLE `film` (
 
 LOCK TABLES `film` WRITE;
 /*!40000 ALTER TABLE `film` DISABLE KEYS */;
-INSERT INTO `film` VALUES (1,'https://www.themoviedb.org/movie/14269-polyester','Polyester',1981),(2,'https://www.themoviedb.org/movie/27072-na-srebrnym-globie','On The Silver Globe',1989),(3,'https://www.themoviedb.org/movie/762-monty-python-and-the-holy-grail','Monty Python and the Holy Grail',1975),(4,'https://www.themoviedb.org/movie/81','NausicaÃ¤ of the Valley of the Wind',1984),(5,'https://www.themoviedb.org/movie/99-todo-sobre-mi-madre','All About My Mother',1999),(6,'https://www.themoviedb.org/movie/1569798','Μάχη',2025),(7,'https://www.themoviedb.org/movie/1000837-ainda-estou-aqui','I\'m Still Here',2024);
+INSERT INTO `film` VALUES (1,'https://www.themoviedb.org/movie/14269-polyester','Polyester',1981),(2,'https://www.themoviedb.org/movie/27072-na-srebrnym-globie','On The Silver Globe',1989),(3,'https://www.themoviedb.org/movie/762-monty-python-and-the-holy-grail','Monty Python and the Holy Grail',1975),(4,'https://www.themoviedb.org/movie/81','NausicaÃ¤ of the Valley of the Wind',1984),(5,'https://www.themoviedb.org/movie/99-todo-sobre-mi-madre','All About My Mother',1999),(6,'https://www.themoviedb.org/movie/1569798','Μάχη',2025),(7,'https://www.themoviedb.org/movie/1000837-ainda-estou-aqui','I\'m Still Here',2024),(8,'https://www.themoviedb.org/movie/674324','The Banshees of Inisherin',2022),(9,'https://www.themoviedb.org/movie/144425-a-trip-down-market-street-before-the-fire','A Trip Down Market Street',1906);
 /*!40000 ALTER TABLE `film` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -642,4 +642,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-12-15 23:17:27
+-- Dump completed on 2025-12-16 22:04:10

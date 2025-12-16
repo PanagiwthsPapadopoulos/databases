@@ -9,4 +9,4 @@ FROM
 JOIN 
     Film ON YEAR(FilmClub.foundingDate) < Film.year
 WHERE 
-    FilmClub.clubID = 12;
+    FilmClub.clubID = 3;
