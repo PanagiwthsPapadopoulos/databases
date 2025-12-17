@@ -80,7 +80,14 @@ CREATE TABLE `belongs_to` (
 
 LOCK TABLES `belongs_to` WRITE;
 /*!40000 ALTER TABLE `belongs_to` DISABLE KEYS */;
-INSERT INTO `belongs_to` VALUES (1,1,'Casual member',0),(1,4,'Social media management',1),(2,1,'Casual member',0),(2,2,'Treasurer',0),(4,2,'IT',1),(5,3,'Treasurer',1),(6,4,'Treasurer',1),(7,5,'Casual member',1);
+INSERT INTO `belongs_to` VALUES (1,1,'Casual member',0),
+(1,4,'Social media management',1),
+(2,1,'Casual member',0),
+(2,2,'Treasurer',0),
+(4,2,'IT',1),
+(5,3,'Treasurer',1),
+(6,4,'Treasurer',1),
+(7,5,'Casual member',1);
 /*!40000 ALTER TABLE `belongs_to` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -254,7 +261,12 @@ CREATE TABLE `filmclub` (
 
 LOCK TABLES `filmclub` WRITE;
 /*!40000 ALTER TABLE `filmclub` DISABLE KEYS */;
-INSERT INTO `filmclub` VALUES (1,'11 kare','2011-01-01',0,'11.kare@proton.me','11ka.re','11kare Club',2),(2,'CineF.Hl','2015-01-01',1,'cinefhl@gmail.com','cinefhl','cinefhl',1),(3,'Nyxterides','2021-01-01',1,'cinematicbatts@gmail.com','cinematicbats','CinematicBats',3),(4,'Kin.O.Ge','2017-01-01',1,'','kin.o.ge','kinoyeah',5),(5,'CinePolsci','2006-01-01',1,'cinepolsci@yahoo.com','cinepolsci','CinePolsci',7);
+INSERT INTO `filmclub` VALUES (1,'11 kare','2011-01-01',0,'11.kare@proton.me','11ka.re','11kare Club',2),
+(2,'CineF.Hl','2015-01-01',1,'cinefhl@gmail.com','cinefhl','cinefhl',1),
+(3,'Nyxterides','2021-01-01',1,'cinematicbatts@gmail.com','cinematicbats','CinematicBats',3),
+(4,'Kin.O.Ge','2017-01-01',1,'','kin.o.ge','kinoyeah',5),
+(5,'CinePolsci','2006-01-01',1,'cinepolsci@yahoo.com','cinepolsci','CinePolsci',7),
+(99,'The Completionists','2020-01-01',1,'all.movies@auth.gr','complete.movies','TheCompleteClub',1);
 /*!40000 ALTER TABLE `filmclub` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -436,7 +448,7 @@ CREATE TABLE `schedules` (
 
 LOCK TABLES `schedules` WRITE;
 /*!40000 ALTER TABLE `schedules` DISABLE KEYS */;
-INSERT INTO `schedules` VALUES (2,1),(1,2),(3,3),(4,3),(5,4),(2,5),(4,6);
+INSERT INTO `schedules` VALUES (2,1),(1,2),(3,3),(4,3),(5,4),(2,5),(4,6),(99,101),(99,102),(99,103),(99,104),(99,105),(99,106),(99,107),(99,108),(99,109),(1,200);
 /*!40000 ALTER TABLE `schedules` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -463,7 +475,23 @@ CREATE TABLE `screening` (
 
 LOCK TABLES `screening` WRITE;
 /*!40000 ALTER TABLE `screening` DISABLE KEYS */;
-INSERT INTO `screening` VALUES (1,'2019-03-22 20:00:00',2),(2,'2019-04-10 22:00:00',3),(3,'2019-10-01 21:30:00',3),(4,'2019-10-03 00:00:00',1),(5,'2019-10-07 21:00:00',5),(6,'2020-10-07 21:30:00',2);
+INSERT INTO `screening` VALUES 
+(1,'2019-03-22 20:00:00',2),
+(2,'2019-04-10 22:00:00',3),
+(3,'2019-10-01 21:30:00',3),
+(4,'2019-10-03 00:00:00',1),
+(5,'2019-10-07 21:00:00',5),
+(6,'2020-10-07 21:30:00',2),
+(101,'2023-01-01 20:00:00',1),
+(102,'2023-01-02 20:00:00',1),
+(103,'2023-01-03 20:00:00',1),
+(104,'2023-01-04 20:00:00',1),
+(105,'2023-01-05 20:00:00',1),
+(106,'2023-01-06 20:00:00',1),
+(107,'2023-01-07 20:00:00',1),
+(108,'2023-01-08 20:00:00',1),
+(109,'2023-01-09 20:00:00',1),
+(200,'2023-05-20 21:00:00',1);
 /*!40000 ALTER TABLE `screening` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -491,7 +519,7 @@ CREATE TABLE `shows` (
 
 LOCK TABLES `shows` WRITE;
 /*!40000 ALTER TABLE `shows` DISABLE KEYS */;
-INSERT INTO `shows` VALUES (1,1),(3,2),(2,4),(4,5),(5,5),(6,5);
+INSERT INTO `shows` VALUES (1,1),(3,2),(2,4),(4,5),(5,5),(6,5),(101,1),(102,2),(103,3),(104,4),(105,5),(106,6),(107,7),(108,8),(109,9),(200,6);
 /*!40000 ALTER TABLE `shows` ENABLE KEYS */;
 UNLOCK TABLES;
 
