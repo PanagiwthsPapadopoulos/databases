@@ -1,0 +1,3 @@
+[submodule "assignment-3/filmclubsauthdb-frontend"]
+	path = assignment-3/filmclubsauthdb-frontend
+	url = https://github.com/PanagiwthsPapadopoulos/filmclubsauthdb-frontend
